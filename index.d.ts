@@ -36,7 +36,8 @@ export interface ActionButtonProperties extends ViewProperties {
 
   useNativeFeedback?: boolean,
   fixNativeFeedbackRadius?: boolean,
-  nativeFeedbackRippleColor?: string
+  nativeFeedbackRippleColor?: string,
+  mainRef?:(ref) => void
 }
 
 export interface ActionButtonItemProperties extends ViewProperties {

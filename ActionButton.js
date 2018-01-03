@@ -188,7 +188,8 @@ export default class ActionButton extends Component {
       : { marginHorizontal: this.props.offsetX, zIndex: this.props.zIndex };
 
     return (
-      <View style={[
+      <View 
+        style={[
         parentStyle,
         !this.props.hideShadow && shadowStyle,
         !this.props.hideShadow && this.props.shadowStyle
@@ -210,6 +211,7 @@ export default class ActionButton extends Component {
           onPressOut={this.props.onPressOut}
         >
           <Animated.View
+            ref={this.props.mainRef}
             style={wrapperStyle}
           >
             <Animated.View style={[buttonStyle, animatedViewStyle]}>
